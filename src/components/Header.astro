@@ -1,0 +1,67 @@
+---
+const links = [
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Ferias', href: '#lineup' },
+  { label: 'Expositores', href: '#speakers' },
+  { label: 'Testimonios', href: '#testimonios' },
+  { label: 'Ubicación', href: '#venue' },
+  { label: 'Precios', href: '#tickets' },
+];
+---
+
+<header class="site-header" id="top">
+  <div class="container header-wrap">
+    <a href="/" class="brand-mark" aria-label="EXPORIGEN inicio">
+      <span class="brand-logo-icon">
+        <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 8C50 8 35 20 35 35C35 45 42 52 50 52C58 52 65 45 65 35C65 20 50 8 50 8Z" fill="currentColor"/>
+          <path d="M50 52C50 52 30 60 25 75C23 82 30 88 40 88C48 88 50 80 50 80C50 80 52 88 60 88C70 88 77 82 75 75C70 60 50 52 50 52Z" fill="currentColor"/>
+          <circle cx="50" cy="35" r="3" fill="currentColor"/>
+          <circle cx="45" cy="42" r="2" fill="currentColor"/>
+          <circle cx="55" cy="42" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="bt-expo">EXPO</span><span class="bt-rigen">RIGEN</span>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation" class="main-nav">
+      <ul class="nav-list">
+        {links.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#registro" class="btn-primary">Ser Expositor</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .brand-logo-icon {
+    color: #B5621A;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: baseline;
+    letter-spacing: 0.02em;
+  }
+
+  .bt-expo {
+    color: #1f2f14;
+  }
+
+  .bt-rigen {
+    color: #B5621A;
+  }
+</style>

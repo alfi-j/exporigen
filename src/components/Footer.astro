@@ -1,0 +1,82 @@
+---
+const links = [
+  { label: 'Sobre la Feria', href: '#sobre' },
+  { label: 'Ediciones', href: '#ediciones' },
+  { label: 'Categorías', href: '#categorias' },
+  { label: 'Ser Expositor', href: '#registro' },
+];
+---
+
+<footer class="site-footer" id="venue">
+  <div class="container footer-signup-wrap">
+    <section class="footer-signup" aria-labelledby="footer-signup-title">
+      <div class="footer-signup-copy">
+        <div class="footer-signup-badge" aria-hidden="true">
+          <span class="footer-signup-mark"></span>
+        </div>
+        <div>
+          <h2 id="footer-signup-title">¡No te pierdas ninguna edición!</h2>
+          <p>
+            Recibe noticias sobre próximas ferias y oportunidades para expositors.
+            Cancela en cualquier momento.
+          </p>
+        </div>
+      </div>
+
+      <form class="footer-signup-form">
+        <div class="signup-grid">
+          <label class="signup-field">
+            <span class="sr-only">Nombre</span>
+            <input type="text" name="firstName" placeholder="Tu Nombre *" />
+          </label>
+
+          <label class="signup-field">
+            <span class="sr-only">Teléfono</span>
+            <input type="text" name="lastName" placeholder="Teléfono *" />
+          </label>
+        </div>
+
+        <label class="signup-field signup-field-wide">
+          <span class="sr-only">Correo electrónico</span>
+          <input type="email" name="email" placeholder="Correo electrónico *" />
+        </label>
+
+        <div class="signup-actions">
+          <label class="signup-consent">
+            <input type="checkbox" name="consent" />
+            <span>Acepto la <a href="#">política de privacidad</a> *</span>
+          </label>
+
+          <button type="submit" class="signup-submit">Suscribirse →</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">EXPORIGEN</p>
+      <p class="footer-copy">Centro de ferias y exposiciones en Santo Domingo de los Colorados, Ecuador.</p>
+    </div>
+
+    <div>
+      <p class="footer-title">Ubicación</p>
+      <p>Santo Domingo de los Colorados</p>
+      <p>Provincia de Santo Domingo de los Tsáchilas</p>
+    </div>
+
+    <div>
+      <p class="footer-title">Enlaces</p>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre la Feria</a></li>
+        <li><a href="#ediciones">Ediciones</a></li>
+        <li><a href="#registro">Ser Expositor</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2025 EXPORIGEN. Todos los derechos reservados.</p>
+    <p><a href="#">Términos</a> | <a href="#">Privacidad</a></p>
+  </div>
+</footer>
