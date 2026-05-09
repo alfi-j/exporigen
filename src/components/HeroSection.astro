@@ -47,11 +47,10 @@
   
 </section>
 
-  <svg class="hero-curve-top" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
-    <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
-  </svg>
-
   <div class="hero-marquee" aria-label="Feria moments">
+    <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+      <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
+    </svg>
     <div class="marquee-track">
       <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
       <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
@@ -118,23 +117,6 @@
     overflow: hidden;
     background: #0c140a;
   }
-
-  .hero-curve-top {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 136px;
-    z-index: 5;
-    pointer-events: none;
-    background-image:
-      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
-      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
-    opacity: 0.04;
-    mix-blend-mode: overlay;
-  }
-
-  .hero-curve-top path { fill: #0c140a; }
 
   .hero-bg {
     position: absolute;
@@ -305,10 +287,27 @@
     margin-top: auto;
     margin-bottom: -74px;
     clip-path: polygon(
-      0 0, 100% 0, 100% 89%, 92% 85%, 78% 81%, 64% 78%,
-      50% 76.5%, 36% 78%, 22% 81%, 8% 85%, 0 89%
+      8% 11%, 22% 13%, 36% 11%, 50% 9%, 64% 11%, 78% 13%, 92% 11%, 100% 15%,
+      100% 89%, 92% 85%, 78% 81%, 64% 78%, 50% 76.5%, 36% 78%, 22% 81%, 8% 85%, 0% 89%
     );
+    background-image:
+      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
+      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
+    opacity: 0.04;
+    mix-blend-mode: overlay;
   }
+
+  .marquee-curve {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 136px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-curve path { fill: #0c140a; }
 
   .marquee-curve-bottom {
     position: absolute;
@@ -354,7 +353,15 @@
       );
     }
 
-    .hero-curve-top { height: 102px; }
+@media (max-width: 900px) {
+    .hero-marquee {
+      margin-bottom: -48px;
+      clip-path: polygon(
+        8% 9%, 22% 11%, 36% 9%, 50% 7%, 64% 9%, 78% 11%, 92% 9%, 100% 13%,
+        100% 91%, 92% 87%, 78% 83%, 64% 80%, 50% 78.5%, 36% 80%, 22% 83%, 8% 87%, 0% 91%
+      );
+    }
+
     .marquee-curve-bottom { height: 88px; }
 
     .marquee-track img { height: 430px; }
