@@ -51,7 +51,6 @@
     <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
       <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
     </svg>
-    <div class="marquee-blend-top"></div>
     <div class="marquee-track">
       <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
       <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
@@ -300,6 +299,11 @@
     height: 136px;
     z-index: 2;
     pointer-events: none;
+    mix-blend-mode: overlay;
+    background-image:
+      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
+      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
+    opacity: 0.04;
   }
 
   .marquee-curve path { fill: #0c140a; }
@@ -315,21 +319,6 @@
   }
 
   .marquee-curve-bottom path { fill: #0c140a; }
-
-  .marquee-blend-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    pointer-events: none;
-    background-image:
-      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
-      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
-    opacity: 0.04;
-    mix-blend-mode: overlay;
-  }
 
   .marquee-track {
     position: relative;
