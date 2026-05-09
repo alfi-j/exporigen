@@ -47,6 +47,28 @@
   
 </section>
 
+  <div class="hero-marquee" aria-label="Feria moments">
+    <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+      <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
+    </svg>
+    <div class="marquee-track">
+      <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/34594518/pexels-photo-34594518.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/34046711/pexels-photo-34046711.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/27692367/pexels-photo-27692367.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/29284293/pexels-photo-29284293.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/34086480/pexels-photo-34086480.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/29708260/pexels-photo-29708260.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+      <img src="https://images.pexels.com/photos/33121483/pexels-photo-33121483.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
+    </div>
+    <svg class="marquee-curve-bottom" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+      <path d="M0,220 L0,174 C320,112 1120,112 1440,174 L1440,220 Z"></path>
+    </svg>
+  </div>
+
 <style>
   .hero-shell {
     position: relative;
@@ -87,6 +109,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    justify-content: center;
+    padding-bottom: 2.25rem;
   }
 
   .hero-label {
@@ -212,6 +237,79 @@
   .cta-secondary:hover {
     background: rgba(255, 252, 222, 0.1);
     border-color: #F4F2EB;
+  }
+
+  .hero-marquee {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    z-index: 4;
+    padding: 0;
+    line-height: 0;
+    margin-top: auto;
+    margin-bottom: -74px;
+    clip-path: polygon(
+      0 0, 100% 0, 100% 89%, 92% 85%, 78% 81%, 64% 78%,
+      50% 76.5%, 36% 78%, 22% 81%, 8% 85%, 0 89%
+    );
+  }
+
+  .marquee-curve {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 136px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-curve path { fill: #0c140a; }
+
+  .marquee-curve-bottom { display: none; }
+
+  .marquee-track {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 0;
+    width: max-content;
+    animation: marquee-slide 28s linear infinite;
+  }
+
+  .marquee-track img {
+    width: clamp(230px, 19.6vw, 320px);
+    height: 520px;
+    object-fit: cover;
+    object-position: center 32%;
+    filter: saturate(1.02) contrast(1.02);
+    display: block;
+  }
+
+  @keyframes marquee-slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-marquee {
+      margin-bottom: -48px;
+      clip-path: polygon(
+        0 0, 100% 0, 100% 91%, 92% 87%, 78% 83%, 64% 80%,
+        50% 78.5%, 36% 80%, 22% 83%, 8% 87%, 0 91%
+      );
+    }
+
+    .marquee-track img {
+      height: 430px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .marquee-track img {
+      width: 58vw;
+      height: 340px;
+    }
   }
 
   
