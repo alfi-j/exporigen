@@ -47,10 +47,11 @@
   
 </section>
 
+  <svg class="hero-curve-top" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+    <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
+  </svg>
+
   <div class="hero-marquee" aria-label="Feria moments">
-    <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
-      <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
-    </svg>
     <div class="marquee-track">
       <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
       <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
@@ -111,11 +112,29 @@
     position: relative;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background: #0c140a;
   }
+
+  .hero-curve-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 136px;
+    z-index: 5;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
+      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+  }
+
+  .hero-curve-top path { fill: #0c140a; }
 
   .hero-bg {
     position: absolute;
@@ -291,23 +310,6 @@
     );
   }
 
-  .marquee-curve {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 136px;
-    z-index: 2;
-    pointer-events: none;
-    mix-blend-mode: overlay;
-    background-image:
-      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
-      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
-    opacity: 0.04;
-  }
-
-  .marquee-curve path { fill: #0c140a; }
-
   .marquee-curve-bottom {
     position: absolute;
     left: 0;
@@ -352,7 +354,7 @@
       );
     }
 
-    .marquee-curve { height: 102px; }
+    .hero-curve-top { height: 102px; }
     .marquee-curve-bottom { height: 88px; }
 
     .marquee-track img { height: 430px; }
