@@ -3,14 +3,11 @@
     <a href="#top" class="logo-pill" aria-label="Back to top">
       <img class="logo-image" src="/exporigen/exporigen-logo.png" alt="EXPORIGEN" />
     </a>
-    <a href="#tickets" class="nav-pill">Program</a>
-    <a href="#lineup" class="nav-pill">Lineup</a>
-    <a href="#lineup" class="nav-pill nav-pill-muted">
-      Leadership Events
-      <span class="badge-new">NEW</span>
-    </a>
-    <a href="#lineup" class="nav-pill">Partners</a>
-    <a href="https://ti.to/ae-events/ae-conference/with/conference-pass" class="nav-pill nav-pill-cta">Tickets</a>
+    <a href="#lineup" class="nav-pill">Ferias</a>
+    <a href="#speakers" class="nav-pill">Expositores</a>
+    <a href="#testimonios" class="nav-pill">Testimonios</a>
+    <a href="#venue" class="nav-pill">Ubicacion</a>
+    <a href="#tickets" class="nav-pill nav-pill-cta">Precios</a>
   </nav>
 </template>
 
@@ -110,28 +107,13 @@ onBeforeUnmount(() => {
   display: block;
 }
 
-.nav-pill-muted {
-  background: #6a6f77;
-  color: #fff;
-}
-
-.badge-new {
-  font-size: 0.6rem;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0.2rem 0.34rem;
-  border-radius: 999px;
-  background: #7e47d3;
-  color: #fff;
-}
-
 .nav-pill-cta {
-  margin-left: auto;
-  background: #B5621A;
-  color: #fff;
-}
+    margin-left: auto;
+    background: #B5621A;
+    color: #fff;
+  }
 
-@media (max-width: 1280px) {
+  @media (max-width: 1280px) {
   .scroll-nav {
     width: calc(100% - 1rem);
     left: 0.5rem;
