@@ -2,194 +2,185 @@
 ---
 
 <section class="hero-shell" id="inicio">
-  <div class="hero-content">
-    <div class="hero-logo-svg-name">
-      <span class="hln-expo">EXPO</span>
-      <span class="hln-icon">
-        <svg width="72" height="72" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 8C50 8 35 20 35 35C35 45 42 52 50 52C58 52 65 45 65 35C65 20 50 8 50 8Z" fill="currentColor"/>
-          <path d="M50 52C50 52 30 60 25 75C23 82 30 88 40 88C48 88 50 80 50 80C50 80 52 88 60 88C70 88 77 82 75 75C70 60 50 52 50 52Z" fill="currentColor"/>
-          <circle cx="50" cy="35" r="3" fill="currentColor"/>
-          <circle cx="45" cy="42" r="2" fill="currentColor"/>
-          <circle cx="55" cy="42" r="2" fill="currentColor"/>
-        </svg>
-      </span>
-      <span class="hln-rigen">RIGEN</span>
-    </div>
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
 
-    <p class="hero-subtitle">Centro de Ferias y Exposiciones</p>
-    <p class="hero-location">Santo Domingo de los Colorados, Ecuador</p>
+  <div class="hero-content">
+    <span class="hero-label">Santo Domingo de los Colorados · Ecuador</span>
+
+    <h1 class="hero-title">
+      EXPO
+      <span class="accent">RIGEN</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      La feria que conecta emprendimientos autenticos con su comunidad. Gastronomia, artesania, innovacion y cultura — todo desde la raiz.
+    </p>
 
     <div class="hero-meta">
-      <div class="meta-item">
-        <span class="meta-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-        </span>
-        <span>Ago 2025 - Ene 2026</span>
+      <div class="hero-meta-item">
+        <span class="meta-label">Proxima Edicion</span>
+        <span class="meta-value">Agosto 2025</span>
       </div>
-      <div class="meta-item">
-        <span class="meta-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-          </svg>
-        </span>
-        <span>80+ Expositores</span>
+      <div class="hero-meta-item">
+        <span class="meta-label">Ubicacion</span>
+        <span class="meta-value">Centro de Exposiciones</span>
       </div>
-      <div class="meta-item">
-        <span class="meta-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-        </span>
-        <span>Santo Domingo</span>
+      <div class="hero-meta-item">
+        <span class="meta-label">Entrada</span>
+        <span class="meta-value">Libre al publico</span>
       </div>
     </div>
 
     <div class="hero-actions">
-      <a href="#registro" class="cta cta-primary">
-        <span>Registrarme como Expositor</span>
-        <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true">
-          <path d="M3 8h8M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-      </a>
-      <a href="#sobre" class="cta cta-secondary">
-        <span>Conocer Más</span>
-      </a>
+      <a href="#registro" class="cta cta-primary">Quiero ser expositor</a>
+      <a href="#sobre" class="cta cta-secondary">Descubrir mas</a>
     </div>
   </div>
 
-  <div class="scroll-indicator">
-    <span class="scroll-text">Descubrir</span>
-    <div class="scroll-arrow">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M19 12l-7 7-7-7"/>
-      </svg>
-    </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
   </div>
 </section>
 
 <style>
   .hero-shell {
-    background: #080808;
+    position: relative;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 6rem 1.5rem 3rem;
-    text-align: center;
+    overflow: hidden;
+    background: #0c140a;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 75% 55% at 65% 45%, rgba(31, 47, 20, 0.9) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 70% at 15% 85%, rgba(19, 30, 13, 0.7) 0%, transparent 65%),
+      linear-gradient(160deg, #0c140a 0%, #1a2812 45%, #0f1a0b 100%);
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
+      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
   }
 
   .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw;
+    padding-top: 68px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
   }
 
-  .hero-logo-svg-name {
-    font-family: "Rye", serif;
-    font-size: clamp(3rem, 12vw, 7rem);
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    line-height: 1;
-    gap: 0.1em;
-  }
-
-  .hln-expo {
-    color: #fffcde;
-  }
-
-  .hln-icon {
-    color: #fffcde;
-    display: flex;
+  .hero-label {
+    display: inline-flex;
     align-items: center;
+    gap: 0.6rem;
+    background: rgba(31, 47, 20, 0.5);
+    border: 1px solid rgba(181, 98, 26, 0.45);
+    color: #D4783A;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
   }
 
-  .hln-icon svg {
-    width: 0.85em;
-    height: 0.85em;
+  .hero-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: #B5621A;
   }
 
-  .hln-rigen {
+  .hero-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(4.5rem, 10vw, 10rem);
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+    color: #F4F2EB;
+    margin: 0;
+  }
+
+  .hero-title .accent {
     color: #B5621A;
+    display: block;
   }
 
   .hero-subtitle {
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: #fffcde;
-    margin: 0;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.85;
-  }
-
-  .hero-location {
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
     color: #D9D5C4;
-    margin: 0.25rem 0 0;
+    margin-top: 1.2rem;
+    max-width: 520px;
+    line-height: 1.6;
   }
 
   .hero-meta {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
   }
 
-  .meta-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #D9D5C4;
-    font-weight: 500;
-    font-size: 0.95rem;
+  .hero-meta-item {
+    text-align: center;
   }
 
-  .meta-icon {
+  .meta-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: #B5621A;
-    display: flex;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .meta-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #F4F2EB;
+    display: block;
   }
 
   .hero-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 2.5rem;
   }
 
   .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.85rem 2.2rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .cta-primary {
     background: #B5621A;
-    color: #fff;
+    color: #0c140a;
   }
 
   .cta-primary:hover {
@@ -197,62 +188,58 @@
     transform: translateY(-2px);
   }
 
-  .cta-arrow {
-    width: 18px;
-    height: 18px;
-  }
-
   .cta-secondary {
     background: transparent;
-    color: #fffcde;
-    border: 1px solid #D9D5C4;
+    color: #F4F2EB;
+    border: 1.5px solid rgba(242, 232, 213, 0.45);
   }
 
   .cta-secondary:hover {
-    background: rgba(255, 252, 222, 0.1);
-    border-color: #fffcde;
+    border-color: #F4F2EB;
+    transform: translateY(-2px);
   }
 
-  .scroll-indicator {
+  .hero-scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     color: #D9D5C4;
-    animation: float 2s ease-in-out infinite;
-  }
-
-  .scroll-text {
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    font-size: 0.7rem;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 2;
   }
 
-  .scroll-arrow {
-    display: flex;
+  .hero-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, #B5621A, transparent);
+    animation: scrollPulse 2s infinite;
   }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
   }
 
   @media (max-width: 640px) {
-    .hero-meta {
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
     .hero-actions {
       flex-direction: column;
-      width: 100%;
     }
 
     .cta {
       width: 100%;
-      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-meta {
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
   }
 </style>
