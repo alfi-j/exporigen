@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.vue';
+import HeroSection from '../components/HeroSection.astro';
 import SectionScrollNav from '../components/SectionScrollNav.vue';
 import NoiseStageSection from '../components/NoiseStageSection.astro';
 import EventCards from '../components/EventCards.astro';
@@ -14,7 +14,7 @@ import Footer from '../components/Footer.astro';
 <Layout title="EXPORIGEN - Ferias y Exposiciones en Santo Domingo">
   <SectionScrollNav client:load />
   <main>
-    <HeroSection client:load />
+    <HeroSection />
     <NoiseStageSection />
     <EventCards />
     <SpeakersShowcaseSection />
