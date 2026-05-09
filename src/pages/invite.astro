@@ -3,10 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import SectionScrollNav from '../components/SectionScrollNav.vue';
 import Footer from '../components/Footer.astro';
+
+const inviteLinks = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Ferias', href: '/#lineup' },
+  { label: 'Expositores', href: '/#speakers' },
+  { label: 'Ubicación', href: '/#venue' },
+];
 ---
 
-<Layout title="Apply for an Invite - ARTHAM AI Summit">
-  <Header />
+<Layout title="Invitar Expositor - EXPORIGEN">
+  <Header links={inviteLinks} />
   <SectionScrollNav client:load />
   <main class="invite-page">
     <div class="invite-page-video-bg" aria-hidden="true">

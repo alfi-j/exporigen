@@ -1,12 +1,16 @@
 ---
-const links = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Ferias', href: '#lineup' },
-  { label: 'Expositores', href: '#speakers' },
-  { label: 'Testimonios', href: '#testimonios' },
-  { label: 'Ubicación', href: '#venue' },
-  { label: 'Precios', href: '#tickets' },
-];
+interface Props {
+  links?: Array<{ label: string; href: string }>;
+}
+
+const {
+  links = [
+    { label: 'Inicio', href: '/' },
+    { label: 'Ferias', href: '/#lineup' },
+    { label: 'Expositores', href: '/#speakers' },
+    { label: 'Ubicación', href: '/#venue' },
+  ]
+} = Astro.props;
 ---
 
 <header class="site-header" id="top">
