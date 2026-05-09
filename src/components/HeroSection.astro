@@ -32,8 +32,15 @@
     </div>
 
     <div class="hero-actions">
-      <a href="#registro" class="cta cta-primary">Quiero ser expositor</a>
-      <a href="#sobre" class="cta cta-secondary">Descubrir mas</a>
+      <a href="#registro" class="cta cta-primary">
+        <span>Registrarme como Expositor</span>
+        <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 8h8M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#sobre" class="cta cta-secondary">
+        <span>Conocer Mas</span>
+      </a>
     </div>
   </div>
 
@@ -165,23 +172,25 @@
     display: flex;
     gap: 1rem;
     margin-top: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .cta {
-    padding: 0.85rem 2.2rem;
-    font-family: "Barlow", sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
   }
 
   .cta-primary {
     background: #B5621A;
-    color: #0c140a;
+    color: #fff;
   }
 
   .cta-primary:hover {
@@ -189,15 +198,20 @@
     transform: translateY(-2px);
   }
 
+  .cta-arrow {
+    width: 18px;
+    height: 18px;
+  }
+
   .cta-secondary {
     background: transparent;
     color: #F4F2EB;
-    border: 1.5px solid rgba(242, 232, 213, 0.45);
+    border: 1px solid #D9D5C4;
   }
 
   .cta-secondary:hover {
+    background: rgba(255, 252, 222, 0.1);
     border-color: #F4F2EB;
-    transform: translateY(-2px);
   }
 
   
