@@ -47,31 +47,6 @@
     </div>
   </div>
 </section>
-  <div class="marquee-track">
-    <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34594518/pexels-photo-34594518.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34046711/pexels-photo-34046711.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/27692367/pexels-photo-27692367.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/29284293/pexels-photo-29284293.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34086480/pexels-photo-34086480.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/29708260/pexels-photo-29708260.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/33121483/pexels-photo-33121483.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34594518/pexels-photo-34594518.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34046711/pexels-photo-34046711.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/27692367/pexels-photo-27692367.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/29284293/pexels-photo-29284293.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/34086480/pexels-photo-34086480.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/29708260/pexels-photo-29708260.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-    <img src="https://images.pexels.com/photos/33121483/pexels-photo-33121483.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy" />
-  </div>
-</div>
 
 <style>
   .hero-shell {
@@ -243,42 +218,6 @@
   .cta-secondary:hover {
     background: rgba(31, 47, 20, 0.05);
     border-color: #324d1f;
-  }
-
-  .hero-marquee {
-    overflow: hidden;
-    line-height: 0;
-    margin-bottom: -1px;
-  }
-
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee-slide 28s linear infinite;
-  }
-
-  .marquee-track img {
-    width: clamp(230px, 19.6vw, 320px);
-    height: 520px;
-    object-fit: cover;
-    object-position: center 32%;
-    display: block;
-  }
-
-  @keyframes marquee-slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  @media (max-width: 900px) {
-    .marquee-track img { height: 430px; }
-  }
-
-  @media (max-width: 640px) {
-    .marquee-track img {
-      width: 58vw;
-      height: 340px;
-    }
   }
 
   @media (max-width: 640px) {
