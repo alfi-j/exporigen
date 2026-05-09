@@ -48,9 +48,7 @@
 </section>
 
   <div class="hero-marquee" aria-label="Feria moments">
-    <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
-      <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
-    </svg>
+    <div class="marquee-blend-top"></div>
     <div class="marquee-track">
       <img src="https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
       <img src="https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
@@ -64,9 +62,6 @@
       <img src="https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
       <img src="https://images.pexels.com/photos/33121483/pexels-photo-33121483.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Feria expo" loading="lazy" />
     </div>
-    <svg class="marquee-curve-bottom" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
-      <path d="M0,220 L0,174 C320,112 1120,112 1440,174 L1440,220 Z"></path>
-    </svg>
   </div>
 
 <style>
@@ -248,25 +243,22 @@
     line-height: 0;
     margin-top: auto;
     margin-bottom: -74px;
-    clip-path: polygon(
-      0 0, 100% 0, 100% 89%, 92% 85%, 78% 81%, 64% 78%,
-      50% 76.5%, 36% 78%, 22% 81%, 8% 85%, 0 89%
-    );
   }
 
-  .marquee-curve {
+  .marquee-blend-top {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 136px;
+    left: 0;
+    right: 0;
+    height: 100%;
     z-index: 2;
     pointer-events: none;
+    background-image:
+      repeating-linear-gradient(0deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px),
+      repeating-linear-gradient(90deg, #F4F2EB 0px, transparent 1px, transparent 60px, #F4F2EB 61px);
+    opacity: 0.04;
+    mix-blend-mode: overlay;
   }
-
-  .marquee-curve path { fill: #0c140a; }
-
-  .marquee-curve-bottom { display: none; }
 
   .marquee-track {
     position: relative;
@@ -292,14 +284,6 @@
   }
 
   @media (max-width: 900px) {
-    .hero-marquee {
-      margin-bottom: -48px;
-      clip-path: polygon(
-        0 0, 100% 0, 100% 91%, 92% 87%, 78% 83%, 64% 80%,
-        50% 78.5%, 36% 80%, 22% 83%, 8% 87%, 0 91%
-      );
-    }
-
     .marquee-track img {
       height: 430px;
     }
