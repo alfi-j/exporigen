@@ -5,7 +5,7 @@
     <div class="hero-grid-atmosphere" ref="gridOverlayRef" aria-hidden="true"></div>
 
     <div class="hero-top container" ref="heroTopRef">
-      <img class="hero-logo" src="/src/assets/exporigen-logo.png" alt="EXPORIGEN logo" />
+      <img class="hero-logo" src="/exporigen-logo.png" alt="EXPORIGEN logo" />
       <p class="hero-date">Santo Domingo de los Colorados, Ecuador</p>
       <h1 class="hero-title" ref="titleRef">FERIAS Y<br/>EXPOSICIONES</h1>
       <p class="hero-copy">El centro de ferias y exposiciones de Santo Domingo. Conectamos empresarios locales con su comunidad.</p>

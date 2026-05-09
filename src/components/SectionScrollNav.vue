@@ -1,7 +1,7 @@
 <template>
   <nav class="scroll-nav" :class="{ 'is-visible': isVisible }" aria-label="Section quick navigation">
     <a href="#top" class="logo-pill" aria-label="Back to top">
-      <img class="logo-image" src="/src/assets/exporigen-logo.png" alt="EXPORIGEN" />
+      <img class="logo-image" src="/exporigen-logo.png" alt="EXPORIGEN" />
     </a>
     <a href="#tickets" class="nav-pill">Program</a>
     <a href="#lineup" class="nav-pill">Lineup</a>
