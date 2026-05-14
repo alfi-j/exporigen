@@ -1,0 +1,166 @@
+---
+const categories = [
+  {
+    title: 'Gastronomía',
+    description: 'Sabores auténticos de la costa, sierra y amazonia',
+  },
+  {
+    title: 'Artesanía',
+    description: 'Productos elaborados con técnicas ancestrales',
+  },
+  {
+    title: 'Innovación',
+    description: 'Startups y proyectos tecnológicos locales',
+  },
+  {
+    title: 'Cultura',
+    description: 'Expresiones artísticas y patrimonio vivo',
+  },
+];
+---
+
+<section class="mission-section" id="mision" aria-labelledby="mission-title">
+  <div class="mission-shell container">
+    <header class="mission-header">
+      <span class="mission-label">Nuestra Misión</span>
+      <h2 id="mission-title">
+        <span class="highlight">Ser el origen</span><br />
+        de nuevas oportunidades
+      </h2>
+      <p class="mission-intro">
+        EXPORIGEN nace para visibilizar lo que se produce, crea y piensa en nuestra región.
+        Una plataforma donde emprendedores locales conectan con clientes reales, aliados
+        estratégicos y la comunidad.
+      </p>
+    </header>
+
+    <div class="mission-grid">
+      {categories.map((cat, index) => (
+        <article class="mission-card" style={`--card-delay: ${index * 0.1}s;`}>
+          <h3>{cat.title}</h3>
+          <p>{cat.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission-section {
+    background: var(--tierra);
+    padding: 5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  .mission-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mission-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .mission-label {
+    display: inline-block;
+    font-family: "Barlow", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: "Bebas Neue", "Impact", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.05;
+    color: var(--crema);
+    margin: 0 0 1.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .highlight {
+    color: var(--dorado);
+  }
+
+  .mission-intro {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.125rem;
+    color: var(--crema-dk);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .mission-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .mission-card {
+    background: var(--blanco);
+    border: 1px solid var(--crema-dk);
+    border-left: 3px solid var(--dorado);
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    animation: fadeUp 0.6s ease backwards;
+    animation-delay: var(--card-delay);
+  }
+
+  .mission-card:hover {
+    background: var(--crema);
+    border-left-color: var(--dorado-lt);
+    border-color: var(--dorado);
+    transform: translateY(-4px);
+  }
+
+  .mission-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--tierra);
+    margin: 0 0 0.75rem;
+  }
+
+  .mission-card p {
+    font-family: "Barlow", sans-serif;
+    font-size: 0.9375rem;
+    color: var(--negro);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
